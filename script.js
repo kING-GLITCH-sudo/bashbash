@@ -41,7 +41,7 @@ const css = `
   .user-bar .avatar { margin: 0 0 0 5px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
   .user-bar .avatar img { border-radius: 50%;  width: 44px; height: 44px; min-width: 44px; min-height: 44px; object-fit: cover; }
   .user-bar div {float: left; position: relative; }
-  .user-bar .name-status-div {display: flex; width: 100%; margin-left: 5px; flex-direction: column;}
+  .user-bar .name-status-div {display: flex; width: 100%; margin-left: 10px; */ flex-direction: column; */}
   .user-bar .name { float: left; font-size: 17px; font-weight: 600; overflow: hidden; white-space: nowrap; }
   .user-bar .status { float: left; font-size: 13px; font-weight: 400; }
   .user-bar .actions {float: right !important; margin-right: 15px;}
