@@ -29,18 +29,6 @@ if (!document.getElementById(cssId)) {
   head.appendChild(styleSheet);
 }
 
-// Remove o scroll no ios
-const bodyType = document.querySelector('body');
-let scrollPosition = 0;
-scrollPosition = window.pageYOffset;
-bodyType.style.overflow = 'hidden';
-bodyType.style.position = 'fixed';
-bodyType.style.top = `-${scrollPosition}px`;
-bodyType.style.width = '100%';
-
-// Localiza o container principal do Typebot
-var elementoPai = document.getElementsByTagName("typebot-standard")[0].shadowRoot.querySelector('.typebot-container');
-
 // Criação da barra de usuário (similar à do WhatsApp)
 var userBar = document.createElement("div");
 userBar.className = "user-bar";
@@ -94,11 +82,6 @@ setInterval(() => {
   const inputContainer = botBody.querySelector('.typebot-input-container');
   if (inputContainer){
     inputContainer.style.width = botBody.offsetWidth + "px"
-  }
-
-  const inputForm = botBody.querySelector('.typebot-input-form');
-  if (inputForm){
-    inputForm.classList.remove("max-w-[350px]");
   }
 
   if (isTyping && sibling?.src) {
