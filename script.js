@@ -1,34 +1,3 @@
-function criarBarra(var_nome, var_avatar) {
-
-  // Estilos CSS embutidos diretamente no JavaScript
-const css = `
-  #checkIcon { stroke-dasharray: 40; stroke-dashoffset: 40; }
-  #checkIcon path:nth-child(1) { animation: showIcon 250ms ease forwards; animation-delay: 500ms; }
-  #checkIcon path:nth-child(2) { animation: showIcon 250ms ease forwards; animation-delay: 400ms; }
-  @keyframes showIcon { to { stroke-dashoffset: 0 } }
-
-  .timeNow {animation: 300ms fadeIn;animation-fill-mode: forwards;visibility: hidden;}
-  @keyframes fadeIn {99% {visibility: hidden;}100% {visibility: visible;}}
-
-  audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-panel { background-color: #fff; }
-  audio::-webkit-media-controls-current-time-display { position: absolute; margin-top: 40px; margin-left: 50px; color: #666; }
-  audio::-webkit-media-controls-time-remaining-display, audio::-internal-media-controls-download-button, video::-internal-media-controls-download-button { display: none; }
-  .hide { display: none !important; }
-
-  }
-`;
-
-// Verifica se o estilo já foi adicionado, senão, adiciona-o ao shadow DOM do typebot-standard
-var cssId = 'myCss';  
-if (!document.getElementById(cssId)) {
-  var head = document.getElementsByTagName("typebot-standard")[0].shadowRoot.querySelector('.typebot-container');
-  var styleSheet = document.createElement("style");
-  styleSheet.id = cssId;
-  styleSheet.type = "text/css";
-  styleSheet.innerText = css;
-  head.appendChild(styleSheet);
-}
-
 // Verifica se o bot está digitando ou gravando áudio e atualiza o status
 setInterval(() => {
   const isTyping = botBody.querySelector('.bubble1');
