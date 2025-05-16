@@ -2,11 +2,11 @@ function criarBarra(var_nome, var_avatar) {
 
   // Estilos CSS embutidos diretamente no JavaScript
 const css = `
-  .typebot-chat-view {padding-top: 90px; padding-bottom: 300px;}
+  .typebot-chat-view {padding-top: 0px; padding-bottom: 300px;}
 
   div > div.typebot-chat-view.scroll-smooth.gap-2 > div > div > div.flex.flex-col.flex-1.gap-2 > div { margin-top: 20px;}
 
-  .typebot-host-bubble {padding-left: 50px; height: calc(100% + 0px);}
+  .typebot-host-bubble {padding-left: 0px; height: calc(100% + 0px);}
   
   #checkIcon { stroke-dasharray: 40; stroke-dashoffset: 40; }
   #checkIcon path:nth-child(1) { animation: showIcon 250ms ease forwards; animation-delay: 500ms; }
@@ -15,15 +15,6 @@ const css = `
 
   .timeNow {animation: 300ms fadeIn;animation-fill-mode: forwards;visibility: hidden;}
   @keyframes fadeIn {99% {visibility: hidden;}100% {visibility: visible;}}
-
-  .guest-container {margin-top: 10px;}
-  .typebot-container { background-size: initial !important; background-repeat: repeat-x !important; height: 100% !important;}
-  .typebot-host-bubble>.bubble-typing { border-radius: 0 5px 5px 5px; }
-  .typebot-host-bubble>.bubble-typing:after { position: absolute; content: ""; width: 0; height: 0; border-style: solid; border-width: 0px 10px 10px 0; border-color: transparent #fff transparent transparent; top: 0; left: -10px; }
-  .typebot-guest-bubble { position: relative; border-radius: 5px 0 5px 5px; }
-  .typebot-guest-bubble:after { position: absolute; content: ""; width: 0; height: 0; border-style: solid; border-width: 0px 0 10px 10px; border-color: transparent transparent transparent #e1ffc7; top: 0; right: -10px; }
-  iframe[src=""] { position: fixed; top: 0; left: 0; display: relative; width: 100%; height: 100% !important; z-index: 999999; border: none; padding: 0; margin: 0; }
-  a#lite-badge { display: none !important; }
 
   audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-panel { background-color: #fff; }
   audio::-webkit-media-controls-current-time-display { position: absolute; margin-top: 40px; margin-left: 50px; color: #666; }
