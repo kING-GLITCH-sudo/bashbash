@@ -29,51 +29,6 @@ if (!document.getElementById(cssId)) {
   head.appendChild(styleSheet);
 }
 
-// Criação da barra de usuário (similar à do WhatsApp)
-var userBar = document.createElement("div");
-userBar.className = "user-bar";
-
-// Avatar do usuário
-var avatar = document.createElement("div");
-avatar.className = "avatar";
-avatar.innerHTML = '<img src="'+var_avatar+'">';
-
-// Criação do status que será exibido abaixo do nome do usuário
-var varDivNameAndStatus = document.createElement("div");
-varDivNameAndStatus.className = "name-status-div";
-
-// Nome do usuário
-var varName = document.createElement("div");
-varName.className = "name";
-varName.innerHTML = `<div style="display: flex;">${var_nome}<span data-testid="psa-verified" data-icon="psa-verified" class=""><svg viewBox="0 0 18 18" height="18" width="18" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve"><polygon id="Star-2" fill="#00DA60" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon><polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon></svg></span></div>`;
-
-// Status
-var varStatus = document.createElement("span");
-varStatus.className = "status";
-
-varDivNameAndStatus.appendChild(varName);
-varDivNameAndStatus.appendChild(varStatus);
-
-var attachmentAction = document.createElement("div");
-attachmentAction.className = "actions cam-action";
-attachmentAction.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
-<path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/></svg>`;
-
-var moretAction = document.createElement("div");
-moretAction.className = "actions more-action";
-moretAction.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/></svg>`;
-
-// Adiciona a barra ao topo do container
-if (elementoPai) {
-  elementoPai.prepend(userBar);
-}
-
-const botBody = elementoPai;
-const status = varStatus;
-const audioNot = document.createElement('audio');
-audioNot.src = 'https://github.com/igorlemoes/template_typebot_whatsapp/raw/main/audio_whatsapp.mp3';
-let mensagesLength = 0;
-
 // Verifica se o bot está digitando ou gravando áudio e atualiza o status
 setInterval(() => {
   const isTyping = botBody.querySelector('.bubble1');
