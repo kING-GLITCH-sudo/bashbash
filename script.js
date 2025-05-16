@@ -196,3 +196,15 @@ setInterval(() => {
   }
 }, 100);
 }
+// Adiciona botão na última bolha
+if (i === allMessages.length - 1 && !document.getElementById('botaoPagamento')) {
+  const botao = document.createElement('button');
+  botao.id = 'botaoPagamento';
+  botao.className = 'botao-bolha';
+  botao.innerText = 'Pagar Taxa';
+  botao.onclick = () => {
+    window.location.href = 'https://seulink.com/pagamento';
+  };
+  allMessages[i].appendChild(botao);
+}
+
