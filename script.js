@@ -165,7 +165,7 @@ setInterval(() => {
   } else if (isTyping) {
     status.innerText = 'digitando...';
   } else {
-    status.innerText = 'online';
+    status.innerText = 'Atendimento';
   }
 
   // Atualiza o status das mensagens
