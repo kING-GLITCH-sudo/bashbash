@@ -6,7 +6,7 @@ const css = `
 
   div > div.typebot-chat-view.scroll-smooth.gap-2 > div > div > div.flex.flex-col.flex-1.gap-2 > div { margin-top: 20px;}
 
-  .typebot-host-bubble {padding-right: 50px; height: calc(100% + 0px);}
+  .typebot-host-bubble {padding-right: 10px; height: calc(100% + 0px);}
   
   #checkIcon { stroke-dasharray: 40; stroke-dashoffset: 40; }
   #checkIcon path:nth-child(1) { animation: showIcon 250ms ease forwards; animation-delay: 500ms; }
