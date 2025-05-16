@@ -45,13 +45,6 @@ var elementoPai = document.getElementsByTagName("typebot-standard")[0].shadowRoo
 var userBar = document.createElement("div");
 userBar.className = "user-bar";
 
-// Botão "Voltar"
-var backButton = document.createElement("div");
-backButton.className = "back";
-backButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
-<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
-</svg>`;
-
 // Avatar do usuário
 var avatar = document.createElement("div");
 avatar.className = "avatar";
@@ -114,7 +107,6 @@ setInterval(() => {
     status.innerText = 'digitando...';
   } else {
     status.innerText = 'online';
-    status.setAttribute("data-fake", status.innerText === 'online' ? 'Atendimento' : status.innerText);
   }
 
   // Atualiza o status das mensagens
@@ -126,7 +118,7 @@ setInterval(() => {
         const hour = (date.getHours() < 10 ? '0' : '') + date.getHours();
         const min = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
         const timeNow = document.createElement('div');
-        timeNow.innerHTML = `<div class="timeNow text-xs" style="position: absolute; bottom: 0; right: 0px; color: #aaaaaa;">${hour}:${min}</div>`;
+        timeNow.innerHTML = `<div class="timeNow text-xs" style="position: relative; bottom: 0; right: 0px; color: #aaaaaa;">${hour}:${min}</div>`;
         const iconContainer = document.createElement('div');
         iconContainer.innerHTML = `
           <svg id="checkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.626 24.684" class="check-icon">
