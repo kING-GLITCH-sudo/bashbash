@@ -36,7 +36,7 @@ const css = `
   audio::-webkit-media-controls-time-remaining-display, audio::-internal-media-controls-download-button, video::-internal-media-controls-download-button { display: none; }
   .hide { display: none !important; }
   
-  .user-bar { display: flex; width: 100%; height: 70px; align-items: center; background: #005e54; color: #fff; font-size: 24px; position: absolute; z-index: 99999; top: 0; }
+  .user-bar { display: flex; width: 100%; height: 70px; align-items: center; background: #005e54; color: #000; font-size: 24px; position: absolute; z-index: 99999; top: 0; }
   .user-bar:after { content: ""; display: table; clear: both; }
   .user-bar .avatar { margin: 0 0 0 5px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
   .user-bar .avatar img { border-radius: 50%;  width: 44px; height: 44px; min-width: 44px; min-height: 44px; object-fit: cover; }
