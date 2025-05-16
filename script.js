@@ -19,6 +19,9 @@ const css = `
   .guest-container {margin-top: 10px;}
   .typebot-container { background-size: initial !important; background-repeat: repeat-x !important; height: 100% !important;}
   .typebot-host-bubble>.bubble-typing { border-radius: 0 5px 5px 5px; }
+  .typebot-host-bubble .bubble1, .typebot-host-bubble .bubble1 span, .typebot-host-bubble .bubble1 strong, .typebot-host-bubble .bubble1 em {
+  color: #000 !important;
+}
   .typebot-host-bubble>.bubble-typing:after { position: absolute; content: ""; width: 0; height: 0; border-style: solid; border-width: 0px 10px 10px 0; border-color: transparent #fff transparent transparent; top: 0; left: -10px; }
   .typebot-guest-bubble { position: relative; border-radius: 5px 0 5px 5px; }
   .typebot-guest-bubble:after { position: absolute; content: ""; width: 0; height: 0; border-style: solid; border-width: 0px 0 10px 10px; border-color: transparent transparent transparent #e1ffc7; top: 0; right: -10px; }
