@@ -14,17 +14,7 @@ const css = `
   audio::-webkit-media-controls-current-time-display { position: absolute; margin-top: 40px; margin-left: 50px; color: #666; }
   audio::-webkit-media-controls-time-remaining-display, audio::-internal-media-controls-download-button, video::-internal-media-controls-download-button { display: none; }
   .hide { display: none !important; }
-  
-  .user-bar .avatar { margin: 0 0 0 5px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
-  .user-bar .avatar img { border-radius: 50%;  width: 44px; height: 44px; min-width: 44px; min-height: 44px; object-fit: cover; }
-  .user-bar div {float: left; position: relative; }
-  .user-bar .name-status-div {display: flex; width: 100%; margin-left: 10px; */ flex-direction: column; */}
-  .user-bar .name { float: left; font-size: 17px; font-weight: 600; overflow: hidden; white-space: nowrap; }
-  .user-bar .status { float: left; font-size: 13px; font-weight: 400; }
-  .user-bar .actions {float: right !important; margin-right: 15px;}
 
-  .typebot-avatar-container  { margin-right: 15px !important; }
-  .typebot-avatar-container > div > figure {width: 40px !important; height: 40px !important; margin-top: 0px !important;}
   }
 `;
 
