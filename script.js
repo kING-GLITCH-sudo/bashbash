@@ -2,12 +2,6 @@ function criarBarra(var_nome, var_avatar) {
 
   // Estilos CSS embutidos diretamente no JavaScript
 const css = `
-  .typebot-chat-view {padding-top: 0px; padding-bottom: 300px;}
-
-  div > div.typebot-chat-view.scroll-smooth.gap-2 > div > div > div.flex.flex-col.flex-1.gap-2 > div { margin-top: 20px;}
-
-  .typebot-host-bubble {padding-left: 0px; height: calc(100% + 0px);}
-  
   #checkIcon { stroke-dasharray: 40; stroke-dashoffset: 40; }
   #checkIcon path:nth-child(1) { animation: showIcon 250ms ease forwards; animation-delay: 500ms; }
   #checkIcon path:nth-child(2) { animation: showIcon 250ms ease forwards; animation-delay: 400ms; }
@@ -21,8 +15,6 @@ const css = `
   audio::-webkit-media-controls-time-remaining-display, audio::-internal-media-controls-download-button, video::-internal-media-controls-download-button { display: none; }
   .hide { display: none !important; }
   
-  .user-bar { display: flex; width: 100%; height: 70px; align-items: center; background: #005e54; color: #000; font-size: 24px; position: absolute; z-index: 99999; top: 0; }
-  .user-bar:after { content: ""; display: table; clear: both; }
   .user-bar .avatar { margin: 0 0 0 5px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
   .user-bar .avatar img { border-radius: 50%;  width: 44px; height: 44px; min-width: 44px; min-height: 44px; object-fit: cover; }
   .user-bar div {float: left; position: relative; }
@@ -100,14 +92,6 @@ var moretAction = document.createElement("div");
 moretAction.className = "actions more-action";
 moretAction.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/></svg>`;
 
-// Adiciona os componentes à barra de usuário
-userBar.appendChild(backButton);
-userBar.appendChild(avatar);
-userBar.appendChild(varDivNameAndStatus);
-userBar.appendChild(phoneAction);
-userBar.appendChild(attachmentAction);
-userBar.appendChild(moretAction);
-
 // Adiciona a barra ao topo do container
 if (elementoPai) {
   elementoPai.prepend(userBar);
@@ -152,7 +136,7 @@ setInterval(() => {
         const hour = (date.getHours() < 10 ? '0' : '') + date.getHours();
         const min = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
         const timeNow = document.createElement('div');
-        timeNow.innerHTML = `<div class="timeNow text-xs" style="position: absolute; bottom: 0; right: 25px; color: #aaaaaa;">${hour}:${min}</div>`;
+        timeNow.innerHTML = `<div class="timeNow text-xs" style="position: absolute; bottom: 0; right: 0px; color: #aaaaaa;">${hour}:${min}</div>`;
         const iconContainer = document.createElement('div');
         iconContainer.innerHTML = `
           <svg id="checkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.626 24.684" class="check-icon">
@@ -170,4 +154,3 @@ setInterval(() => {
   }
 }, 100);
 }
-
