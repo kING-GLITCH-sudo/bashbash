@@ -18,7 +18,7 @@ const css = `
 
   .guest-container {margin-top: 10px;}
   .typebot-container { background-size: initial !important; background-repeat: repeat-x !important; height: 100% !important;}
-  .typebot-host-bubble>.bubble-typing { color: #000; border-radius: 0 5px 5px 5px; }
+  .typebot-host-bubble>.bubble-typing { border-radius: 0 5px 5px 5px; }
   .typebot-host-bubble>.bubble-typing:after { position: absolute; content: ""; width: 0; height: 0; border-style: solid; border-width: 0px 10px 10px 0; border-color: transparent #fff transparent transparent; top: 0; left: -10px; }
   .typebot-guest-bubble { position: relative; border-radius: 5px 0 5px 5px; }
   .typebot-guest-bubble:after { position: absolute; content: ""; width: 0; height: 0; border-style: solid; border-width: 0px 0 10px 10px; border-color: transparent transparent transparent #e1ffc7; top: 0; right: -10px; }
@@ -36,7 +36,7 @@ const css = `
   audio::-webkit-media-controls-time-remaining-display, audio::-internal-media-controls-download-button, video::-internal-media-controls-download-button { display: none; }
   .hide { display: none !important; }
   
-  .user-bar { display: flex; width: 100%; height: 70px; align-items: center; background:rgb(0, 0, 0); color: #fff; font-size: 24px; position: absolute; z-index: 99999; top: 0; }
+  .user-bar { display: flex; width: 100%; height: 70px; align-items: center; background: #005e54; color: #fff; font-size: 24px; position: absolute; z-index: 99999; top: 0; }
   .user-bar:after { content: ""; display: table; clear: both; }
   .user-bar .avatar { margin: 0 0 0 5px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
   .user-bar .avatar img { border-radius: 50%;  width: 44px; height: 44px; min-width: 44px; min-height: 44px; object-fit: cover; }
@@ -102,7 +102,7 @@ varDivNameAndStatus.className = "name-status-div";
 // Nome do usuário
 var varName = document.createElement("div");
 varName.className = "name";
-varName.innerHTML = `<div style="display: flex;">${var_nome}<span data-testid="psa-verified" data-icon="psa-verified" class=""><svg viewBox="0 0 18 18" height="18" width="18" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve"><polygon id="Star-2" fill="#27a1f9" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon><polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon></svg></span></div>`;
+varName.innerHTML = `<div style="display: flex;">${var_nome}<span data-testid="psa-verified" data-icon="psa-verified" class=""><svg viewBox="0 0 18 18" height="18" width="18" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve"><polygon id="Star-2" fill="#00DA60" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon><polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon></svg></span></div>`;
 
 // Status
 var varStatus = document.createElement("span");
